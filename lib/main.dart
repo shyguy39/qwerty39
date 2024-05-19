@@ -277,7 +277,7 @@ class _ActivationPageState extends State<ActivationPage> {
 
   double calculateSize(BuildContext context, double baseFontSize) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double scaleFactor = screenWidth / 410;
+    double scaleFactor = screenWidth / 420;
     double scaledFontSize = baseFontSize * scaleFactor;
 
     return scaledFontSize;
@@ -285,7 +285,7 @@ class _ActivationPageState extends State<ActivationPage> {
 
   double calculateWidth(BuildContext context, double baseWidth) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double scaleFactor = screenWidth / 370;
+    double scaleFactor = screenWidth / 380;
     double scaledWidth = baseWidth * scaleFactor;
 
     return scaledWidth;
@@ -293,7 +293,7 @@ class _ActivationPageState extends State<ActivationPage> {
 
   double calculateHeight(BuildContext context, double baseHeight) {
     double screenHeight = MediaQuery.of(context).size.height;
-    double scaleFactor = screenHeight / 650;
+    double scaleFactor = screenHeight / 660;
     double scaledHeight = baseHeight * scaleFactor;
 
     return scaledHeight;
