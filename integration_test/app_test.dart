@@ -39,6 +39,7 @@ void main() {
             hasTapAction: true,
             hasCheckedState: true,
             isChecked: false,
+            isHidden: false,
             hasEnabledState: true,
             isEnabled: true,
             isFocusable: true),
