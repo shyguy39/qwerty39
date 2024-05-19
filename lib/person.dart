@@ -96,6 +96,7 @@ class _PersonPageState extends State<PersonPage> {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                     child: TextField(
+                      key: const Key("typeName"),
                       style: TextStyle(
                         fontSize: calculateSize(context, 16),
                       ),
@@ -156,6 +157,7 @@ class _PersonPageState extends State<PersonPage> {
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
                       child: TextField(
+                        key: const Key("typePhone"),
                         style: TextStyle(
                           fontSize: calculateSize(context, 16),
                         ),
@@ -181,6 +183,7 @@ class _PersonPageState extends State<PersonPage> {
               child: Transform.scale(
                 scale: calculateSize(context, 1),
                 child: ElevatedButton(
+                  key: const Key("submitButton"),
                   onPressed: () {
                     widget.addContainer(
                         _nameController.text, int.parse(_phoneController.text));

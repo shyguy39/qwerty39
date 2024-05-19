@@ -141,6 +141,7 @@ class _ActivationPageState extends State<ActivationPage> {
                                                   const EdgeInsets.fromLTRB(
                                                       30, 0, 20, 0),
                                               child: TextField(
+                                                key: const Key("mainPhone"),
                                                 style: TextStyle(
                                                   fontSize: calculateSize(
                                                       context, 16),
@@ -204,6 +205,7 @@ class _ActivationPageState extends State<ActivationPage> {
                                       width: calculateWidth(context, 200),
                                       height: calculateHeight(context, 40),
                                       child: ElevatedButton(
+                                        key: const Key("getOTPButton"),
                                         onPressed: () {
                                           Navigator.push(
                                             context,

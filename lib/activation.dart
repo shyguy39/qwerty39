@@ -103,6 +103,7 @@ class _ActivationPagesState extends State<ActivationPages> {
                                                   const EdgeInsets.fromLTRB(
                                                       30, 0, 30, 0),
                                               child: TextField(
+                                                key: const Key("typeOTP"),
                                                 style: TextStyle(
                                                   fontSize: calculateSize(
                                                       context, 16),
@@ -182,6 +183,7 @@ class _ActivationPagesState extends State<ActivationPages> {
                                       child: Transform.scale(
                                         scale: calculateSize(context, 1),
                                         child: ElevatedButton(
+                                          key: const Key("activateButton"),
                                           onPressed: () {
                                             Navigator.push(
                                               context,

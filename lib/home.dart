@@ -491,6 +491,7 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                         child: ElevatedButton(
+                          key: const Key("addButton"),
                           onPressed: () {
                             Navigator.push(
                               context,
@@ -730,6 +731,7 @@ class _HomePageState extends State<HomePage> {
                             child: Transform.scale(
                               scale: 1,
                               child: ElevatedButton(
+                                key: const Key("editButton"),
                                 onPressed: () {
                                   updateAllValues(
                                     double.parse(_pressureController.text),
@@ -782,6 +784,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Expanded(
                                     child: TextField(
+                                      key: const Key("typePressure"),
                                       style: TextStyle(
                                         fontSize: calculateSize(context, 16),
                                       ),
@@ -848,6 +851,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Expanded(
                                     child: TextField(
+                                      key: const Key("typeFlow"),
                                       style: TextStyle(
                                         fontSize: calculateSize(context, 16),
                                       ),
@@ -923,6 +927,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Expanded(
                                     child: TextField(
+                                      key: const Key("typeLevel"),
                                       style: TextStyle(
                                         fontSize: calculateSize(context, 16),
                                       ),
@@ -989,6 +994,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Expanded(
                                     child: TextField(
+                                      key: const Key("typePower"),
                                       style: TextStyle(
                                         fontSize: calculateSize(context, 16),
                                       ),
@@ -1077,6 +1083,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
                       GestureDetector(
+                        key: const Key("factory1"),
                         onTap: () {
                           setState(() {
                             appBarTitle = 'Factory 1';
@@ -1115,6 +1122,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       GestureDetector(
+                        key: const Key("factory2"),
                         onTap: () {
                           setState(() {
                             appBarTitle = 'Factory 2';
@@ -1154,6 +1162,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       GestureDetector(
+                        key: const Key("factory3"),
                         onTap: () {
                           setState(() {
                             appBarTitle = 'Factory 3';
@@ -1210,6 +1219,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.person,
               size: calculateSize(context, 20),
+              key: const Key("personIcon"),
             ),
           ),
           BottomNavigationBarItem(
@@ -1217,6 +1227,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.home_outlined,
               size: calculateSize(context, 20),
+              key: const Key("homeIcon"),
             ),
           ),
           BottomNavigationBarItem(
@@ -1224,6 +1235,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.settings,
               size: calculateSize(context, 20),
+              key: const Key("settingIcon"),
             ),
           ),
         ],
