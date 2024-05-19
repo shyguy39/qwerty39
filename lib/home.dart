@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
         builder: (BuildContext context, BoxConstraints constraints) {
       double containerWidth = constraints.maxWidth * 1;
       double fontSize = containerWidth * 0.10;
-      double markerOffset = containerWidth * -0.08;
+      double markerOffset = containerWidth * -0.07;
       double rangePointerWidth = containerWidth * 0.13;
 
       return Padding(
@@ -1073,8 +1073,7 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              buildContainerContents(selectedFactory,
-                  currentIndex), // Render container contents based on selected factory
+              buildContainerContents(selectedFactory, currentIndex),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
