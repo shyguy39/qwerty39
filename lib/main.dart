@@ -263,7 +263,7 @@ class _ActivationPageState extends State<ActivationPage> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Readex Pro',
-                    fontSize: calculateSize(context, 11),
+                    fontSize: calculateSize(context, 12),
                     fontWeight: FontWeight.w300,
                   ),
                 ),
