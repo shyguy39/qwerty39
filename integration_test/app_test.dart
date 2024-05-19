@@ -11,7 +11,7 @@ void main() {
       await tester.pumpAndSettle();
 
       final mainPhone = find.byKey(const Key("mainPhone"));
-      var firstCheckbox = find.byType(Checkbox).first;
+      final firstCheckbox = find.byType(Checkbox).first;
       final getOTPButton = find.byKey(const Key("getOTPButton"));
       final typeOTP = find.byKey(const Key("typeOTP"));
       final activateButton = find.byKey(const Key("activateButton"));
