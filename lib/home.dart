@@ -723,7 +723,7 @@ class _HomePageState extends State<HomePage> {
                           padding: EdgeInsets.fromLTRB(
                               calculateSize(context, 35), 0, 10, 0),
                           child: Container(
-                            width: calculateWidth(context, 70),
+                            width: calculateWidth(context, 60),
                             height: calculateHeight(context, 40),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(24),
@@ -743,7 +743,7 @@ class _HomePageState extends State<HomePage> {
                                 },
                                 child: Icon(
                                   Icons.edit,
-                                  size: calculateSize(context, 24),
+                                  size: calculateSize(context, 22),
                                 ),
                               ),
                             ),

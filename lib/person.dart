@@ -41,133 +41,72 @@ class _PersonPageState extends State<PersonPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Text(
-                        'Invitation',
-                        style: TextStyle(
-                          fontFamily: 'Readex Pro',
-                          fontSize: calculateSize(context, 35),
-                          fontWeight: FontWeight.w800,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Text(
+                          'Invitation',
+                          style: TextStyle(
+                            fontFamily: 'Readex Pro',
+                            fontSize: calculateSize(context, 35),
+                            fontWeight: FontWeight.w800,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Invite users',
-                        style: TextStyle(
-                          fontFamily: 'Readex Pro',
-                          fontWeight: FontWeight.w400,
-                          fontSize: calculateSize(context, 16),
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Owner\'s Name',
-                    style: TextStyle(
-                      fontFamily: 'Readex Pro',
-                      fontSize: calculateSize(context, 17),
+                        Text(
+                          'Invite users',
+                          style: TextStyle(
+                            fontFamily: 'Readex Pro',
+                            fontWeight: FontWeight.w400,
+                            fontSize: calculateSize(context, 16),
+                          ),
+                        )
+                      ],
                     ),
-                  )
-                ],
-              ),
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-                    child: TextField(
-                      key: const Key("typeName"),
-                      style: TextStyle(
-                        fontSize: calculateSize(context, 16),
-                      ),
-                      controller: _nameController,
-                      decoration: InputDecoration(
-                        hintStyle: TextStyle(
-                          fontSize: calculateSize(context, 16),
-                        ),
-                        hintText: 'Type here',
-                        border: const OutlineInputBorder(),
-                        filled: true,
-                        fillColor: Colors.white,
-                      ),
-                    ),
-                  ),
+                  ],
                 ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 30, 0, 10),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Owner\'s Phone Number',
-                    style: TextStyle(
-                      fontFamily: 'Readex Pro',
-                      fontSize: calculateSize(context, 17),
-                      letterSpacing: 0,
-                    ),
-                  ),
-                ],
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Image.asset(
-                    'images/malaysia.jpg',
-                    width: calculateWidth(context, 40),
-                    height: calculateHeight(context, 25),
-                    fit: BoxFit.cover,
-                  ),
-                  Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                    child: Text(
-                      '+60',
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Owner\'s Name',
                       style: TextStyle(
                         fontFamily: 'Readex Pro',
-                        letterSpacing: 0,
                         fontSize: calculateSize(context, 17),
                       ),
-                    ),
-                  ),
+                    )
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                       child: TextField(
-                        key: const Key("typePhone"),
+                        key: const Key("typeName"),
                         style: TextStyle(
                           fontSize: calculateSize(context, 16),
                         ),
-                        controller: _phoneController,
-                        keyboardType: TextInputType.phone,
+                        controller: _nameController,
                         decoration: InputDecoration(
                           hintStyle: TextStyle(
                             fontSize: calculateSize(context, 16),
                           ),
-                          hintText: 'Enter your phone number',
+                          hintText: 'Type here',
                           border: const OutlineInputBorder(),
                           filled: true,
                           fillColor: Colors.white,
@@ -177,28 +116,93 @@ class _PersonPageState extends State<PersonPage> {
                   ),
                 ],
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, calculateSize(context, 20), 0, 0),
-              child: Transform.scale(
-                scale: calculateSize(context, 1),
-                child: ElevatedButton(
-                  key: const Key("submitButton"),
-                  onPressed: () {
-                    widget.addContainer(
-                        _nameController.text, int.parse(_phoneController.text));
-                    Navigator.pop(context);
-                  },
-                  child: Text(
-                    'Submit',
-                    style: TextStyle(
-                      fontSize: calculateSize(context, 16),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 30, 0, 10),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Owner\'s Phone Number',
+                      style: TextStyle(
+                        fontFamily: 'Readex Pro',
+                        fontSize: calculateSize(context, 17),
+                        letterSpacing: 0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Image.asset(
+                      'images/malaysia.jpg',
+                      width: calculateWidth(context, 40),
+                      height: calculateHeight(context, 25),
+                      fit: BoxFit.cover,
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                      child: Text(
+                        '+60',
+                        style: TextStyle(
+                          fontFamily: 'Readex Pro',
+                          letterSpacing: 0,
+                          fontSize: calculateSize(context, 17),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                        child: TextField(
+                          key: const Key("typePhone"),
+                          style: TextStyle(
+                            fontSize: calculateSize(context, 16),
+                          ),
+                          controller: _phoneController,
+                          keyboardType: TextInputType.phone,
+                          decoration: InputDecoration(
+                            hintStyle: TextStyle(
+                              fontSize: calculateSize(context, 16),
+                            ),
+                            hintText: 'Enter your phone number',
+                            border: const OutlineInputBorder(),
+                            filled: true,
+                            fillColor: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.fromLTRB(0, calculateSize(context, 20), 0, 0),
+                child: Transform.scale(
+                  scale: calculateSize(context, 1),
+                  child: ElevatedButton(
+                    key: const Key("submitButton"),
+                    onPressed: () {
+                      widget.addContainer(_nameController.text,
+                          int.parse(_phoneController.text));
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                        fontSize: calculateSize(context, 16),
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
