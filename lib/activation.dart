@@ -179,7 +179,7 @@ class _ActivationPagesState extends State<ActivationPages> {
                                     ),
                                     Padding(
                                       padding: EdgeInsets.fromLTRB(
-                                          0, calculateSize(context, 20), 0, 10),
+                                          0, calculateSize(context, 14), 0, 10),
                                       child: Transform.scale(
                                         scale: calculateSize(context, 1),
                                         child: ElevatedButton(
