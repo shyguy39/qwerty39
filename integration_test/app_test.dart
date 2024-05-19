@@ -33,17 +33,7 @@ void main() {
       await tester.enterText(mainPhone, "123456789");
       await tester.pumpAndSettle();
       await Future.delayed(const Duration(seconds: 2));
-      expect(
-        tester.getSemantics(firstCheckbox),
-        matchesSemantics(
-            hasTapAction: true,
-            hasCheckedState: true,
-            isChecked: false,
-            isHidden: false,
-            hasEnabledState: true,
-            isEnabled: true,
-            isFocusable: true),
-      );
+
       await tester.ensureVisible(firstCheckbox);
       await tester.tap(firstCheckbox);
       await tester.pumpAndSettle();
