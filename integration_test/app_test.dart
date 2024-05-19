@@ -44,6 +44,7 @@ void main() {
             isEnabled: true,
             isFocusable: true),
       );
+      await tester.ensureVisible(firstCheckbox);
       await tester.tap(firstCheckbox);
       await tester.pumpAndSettle();
       await Future.delayed(const Duration(seconds: 1));
